@@ -1,0 +1,352 @@
+\hypertarget{assign_8cpp}{}\doxysection{assign.\+cpp File Reference}
+\label{assign_8cpp}\index{assign.cpp@{assign.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_stack}{Stack}}
+\item 
+struct \mbox{\hyperlink{structtree}{tree}}
+\begin{DoxyCompactList}\small\item\em creating the tree data structure \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{assign_8cpp_a70ed59adcb4159ac551058053e649640}{SIZE}}~1000
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{assign_8cpp_ae6af051edad90aad2924797a3368d797}{Reverse}} (string input, int n)
+\item 
+string \mbox{\hyperlink{assign_8cpp_a9d88635785ec8d514097cc6b73bb0fce}{Prefix\+From\+Infix}} (string input)
+\begin{DoxyCompactList}\small\item\em the number of operands in the expression is stored in this variable arr\+Length \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{assign_8cpp_a78fb1a23852d92a5a32769605ff62315}{Check\+Parantheses}} (char c)
+\item 
+char \mbox{\hyperlink{assign_8cpp_ab6d6cac234bc6b0d18289cc562745f58}{Switch\+Parantheses}} (char c)
+\item 
+bool \mbox{\hyperlink{assign_8cpp_a154a657d6de67ae19ac31b6390243182}{Check\+Operator}} (char c)
+\item 
+bool \mbox{\hyperlink{assign_8cpp_a95a7855e8cee10727358564aa8816937}{Check\+Operand}} (char c)
+\item 
+bool \mbox{\hyperlink{assign_8cpp_a55cf69a4b25c471012615657b365a776}{Check\+Right\+Associative}} (char c)
+\item 
+bool \mbox{\hyperlink{assign_8cpp_a46fe58b76c8cddc13d71e3537457586b}{Check\+Negation}} (char c)
+\item 
+bool \mbox{\hyperlink{assign_8cpp_a61c2517cec0073cbe3998880efa18f3d}{Check\+Higher\+Preferance}} (char op1, char op2)
+\item 
+int \mbox{\hyperlink{assign_8cpp_ade861fb47e6178a5fe97ae84f66f4e20}{Operator\+Worth}} (char c)
+\item 
+char $\ast$ \mbox{\hyperlink{assign_8cpp_a7dd330e416e76d23f79963a66d0c9035}{add\+To\+Tree}} (\mbox{\hyperlink{structtree}{tree}} $\ast$$\ast$roothead, char $\ast$input)
+\item 
+void \mbox{\hyperlink{assign_8cpp_a4061862a4d65a4bb9dc9b72eed22c8e7}{traverse}} (\mbox{\hyperlink{structtree}{tree}} $\ast$p)
+\item 
+int \mbox{\hyperlink{assign_8cpp_ae44ff3f013b7b48587e8b16a2deed476}{compute\+Height}} (\mbox{\hyperlink{structtree}{tree}} $\ast$p)
+\item 
+bool \mbox{\hyperlink{assign_8cpp_a3216a54139078a66ccc597b8dd004700}{truthvalue}} (bool opd1, char opt, bool opd2)
+\item 
+bool \mbox{\hyperlink{assign_8cpp_a0a3503aa237dab7435b7adf41cc8ce59}{checkvalue}} (char c)
+\item 
+bool \mbox{\hyperlink{assign_8cpp_a6b06f5782732f58a49a2b1978b643c67}{Check\+In\+Array}} (char c)
+\item 
+void \mbox{\hyperlink{assign_8cpp_accfcaff43c70e4d9ab90f81beed0b920}{settruth}} (char $\ast$a)
+\item 
+bool \mbox{\hyperlink{assign_8cpp_af87c5d8727bf799319f48125a03ec463}{Compute\+Truth}} (\mbox{\hyperlink{structtree}{tree}} $\ast$p)
+\item 
+int \mbox{\hyperlink{assign_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em main function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtree}{tree}} $\ast$ \mbox{\hyperlink{assign_8cpp_ad56896b1e792ccea6de30395d44b95ad}{root}}
+\item 
+char \mbox{\hyperlink{assign_8cpp_aae9a0f3f9862ef783e48e11e9d04e85f}{operandarray}} \mbox{[}53\mbox{]}
+\begin{DoxyCompactList}\small\item\em initializing the root of the tree \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{assign_8cpp_afef3905469c558d579b6a513dc20a719}{trutharray}} \mbox{[}53\mbox{]}
+\begin{DoxyCompactList}\small\item\em the operands in the expression are stored in operand\+Array ~\newline
+ \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{assign_8cpp_ac68eb6eb016b49a93177e74fbaadf820}{arrlength}} = 0
+\begin{DoxyCompactList}\small\item\em the truth values of the operands in the expression are stored in truth\+Array ~\newline
+ \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{assign_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{assign_8cpp_a70ed59adcb4159ac551058053e649640}\label{assign_8cpp_a70ed59adcb4159ac551058053e649640}} 
+\index{assign.cpp@{assign.cpp}!SIZE@{SIZE}}
+\index{SIZE@{SIZE}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{SIZE}{SIZE}}
+{\footnotesize\ttfamily \#define SIZE~1000}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{assign_8cpp_a7dd330e416e76d23f79963a66d0c9035}\label{assign_8cpp_a7dd330e416e76d23f79963a66d0c9035}} 
+\index{assign.cpp@{assign.cpp}!addToTree@{addToTree}}
+\index{addToTree@{addToTree}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{addToTree()}{addToTree()}}
+{\footnotesize\ttfamily char $\ast$ add\+To\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtree}{tree}} $\ast$$\ast$}]{roothead,  }\item[{char $\ast$}]{input }\end{DoxyParamCaption})}
+
+this function creates the parse tree ~\newline
+
+
+this is the base condition for recursion to end
+
+if $\ast$roothead is null this if condition is executed
+
+this checks if the character is an operand
+
+this builds the left sub-\/tree
+
+this builds the right sub-\/tree
+
+this builds the right sub-\/tree\mbox{\Hypertarget{assign_8cpp_a61c2517cec0073cbe3998880efa18f3d}\label{assign_8cpp_a61c2517cec0073cbe3998880efa18f3d}} 
+\index{assign.cpp@{assign.cpp}!CheckHigherPreferance@{CheckHigherPreferance}}
+\index{CheckHigherPreferance@{CheckHigherPreferance}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{CheckHigherPreferance()}{CheckHigherPreferance()}}
+{\footnotesize\ttfamily bool Check\+Higher\+Preferance (\begin{DoxyParamCaption}\item[{char}]{op1,  }\item[{char}]{op2 }\end{DoxyParamCaption})}
+
+we check which operator has higher precedence in the expression when there are two consecutive operators in stack\mbox{\Hypertarget{assign_8cpp_a6b06f5782732f58a49a2b1978b643c67}\label{assign_8cpp_a6b06f5782732f58a49a2b1978b643c67}} 
+\index{assign.cpp@{assign.cpp}!CheckInArray@{CheckInArray}}
+\index{CheckInArray@{CheckInArray}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{CheckInArray()}{CheckInArray()}}
+{\footnotesize\ttfamily bool Check\+In\+Array (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+this function checks if the characters passed are already passed in the array\mbox{\Hypertarget{assign_8cpp_a46fe58b76c8cddc13d71e3537457586b}\label{assign_8cpp_a46fe58b76c8cddc13d71e3537457586b}} 
+\index{assign.cpp@{assign.cpp}!CheckNegation@{CheckNegation}}
+\index{CheckNegation@{CheckNegation}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{CheckNegation()}{CheckNegation()}}
+{\footnotesize\ttfamily bool Check\+Negation (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+we check if current character is anegation symbol\mbox{\Hypertarget{assign_8cpp_a95a7855e8cee10727358564aa8816937}\label{assign_8cpp_a95a7855e8cee10727358564aa8816937}} 
+\index{assign.cpp@{assign.cpp}!CheckOperand@{CheckOperand}}
+\index{CheckOperand@{CheckOperand}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{CheckOperand()}{CheckOperand()}}
+{\footnotesize\ttfamily bool Check\+Operand (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+we check if current character is an operand\mbox{\Hypertarget{assign_8cpp_a154a657d6de67ae19ac31b6390243182}\label{assign_8cpp_a154a657d6de67ae19ac31b6390243182}} 
+\index{assign.cpp@{assign.cpp}!CheckOperator@{CheckOperator}}
+\index{CheckOperator@{CheckOperator}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{CheckOperator()}{CheckOperator()}}
+{\footnotesize\ttfamily bool Check\+Operator (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+we check if current character is an operator\mbox{\Hypertarget{assign_8cpp_a78fb1a23852d92a5a32769605ff62315}\label{assign_8cpp_a78fb1a23852d92a5a32769605ff62315}} 
+\index{assign.cpp@{assign.cpp}!CheckParantheses@{CheckParantheses}}
+\index{CheckParantheses@{CheckParantheses}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{CheckParantheses()}{CheckParantheses()}}
+{\footnotesize\ttfamily bool Check\+Parantheses (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+we check if current character is a parantheses\mbox{\Hypertarget{assign_8cpp_a55cf69a4b25c471012615657b365a776}\label{assign_8cpp_a55cf69a4b25c471012615657b365a776}} 
+\index{assign.cpp@{assign.cpp}!CheckRightAssociative@{CheckRightAssociative}}
+\index{CheckRightAssociative@{CheckRightAssociative}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{CheckRightAssociative()}{CheckRightAssociative()}}
+{\footnotesize\ttfamily bool Check\+Right\+Associative (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+we check the right associativity of operators\mbox{\Hypertarget{assign_8cpp_a0a3503aa237dab7435b7adf41cc8ce59}\label{assign_8cpp_a0a3503aa237dab7435b7adf41cc8ce59}} 
+\index{assign.cpp@{assign.cpp}!checkvalue@{checkvalue}}
+\index{checkvalue@{checkvalue}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{checkvalue()}{checkvalue()}}
+{\footnotesize\ttfamily bool checkvalue (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+this function checks the inputted truth value of the operand passed into the functiom\mbox{\Hypertarget{assign_8cpp_ae44ff3f013b7b48587e8b16a2deed476}\label{assign_8cpp_ae44ff3f013b7b48587e8b16a2deed476}} 
+\index{assign.cpp@{assign.cpp}!computeHeight@{computeHeight}}
+\index{computeHeight@{computeHeight}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{computeHeight()}{computeHeight()}}
+{\footnotesize\ttfamily int compute\+Height (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtree}{tree}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+this function returns the height of the tree
+
+this is the base condition for recursion to end
+
+computes height of left subtree
+
+computes height of right subtree
+
+returns height of left subtree
+
+returns height of right subtree ~\newline
+\mbox{\Hypertarget{assign_8cpp_af87c5d8727bf799319f48125a03ec463}\label{assign_8cpp_af87c5d8727bf799319f48125a03ec463}} 
+\index{assign.cpp@{assign.cpp}!ComputeTruth@{ComputeTruth}}
+\index{ComputeTruth@{ComputeTruth}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{ComputeTruth()}{ComputeTruth()}}
+{\footnotesize\ttfamily bool Compute\+Truth (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtree}{tree}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+this function computes the truth value of the parse tree expression
+
+the truth value of the left subtree
+
+the truth value of the right subtree
+
+check if the current data is not a negation symbol
+
+returns the truth value of current operand
+
+recurses through left subtree
+
+recurses through right subtree ~\newline
+
+
+returns truth value of the subtree ~\newline
+
+
+returns negation of the truth value of right subtree as negation is current data\mbox{\Hypertarget{assign_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{assign_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{assign.cpp@{assign.cpp}!main@{main}}
+\index{main@{main}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+main function 
+
+inputs infix expression
+
+string prefix is the prefix expression of the infix expression that was previously inputted
+
+sets the truth values for input operands ~\newline
+
+
+outputs the prefix expression
+
+calling function to creates the parse tree
+
+calling function to traverses through the parse tree
+
+calling function to compute height of the parse tree
+
+calling function to compute truth value of expression\mbox{\Hypertarget{assign_8cpp_ade861fb47e6178a5fe97ae84f66f4e20}\label{assign_8cpp_ade861fb47e6178a5fe97ae84f66f4e20}} 
+\index{assign.cpp@{assign.cpp}!OperatorWorth@{OperatorWorth}}
+\index{OperatorWorth@{OperatorWorth}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{OperatorWorth()}{OperatorWorth()}}
+{\footnotesize\ttfamily int Operator\+Worth (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+we rank all operators based on their order of precedence (for higher precedence higher rank is given)\mbox{\Hypertarget{assign_8cpp_a9d88635785ec8d514097cc6b73bb0fce}\label{assign_8cpp_a9d88635785ec8d514097cc6b73bb0fce}} 
+\index{assign.cpp@{assign.cpp}!PrefixFromInfix@{PrefixFromInfix}}
+\index{PrefixFromInfix@{PrefixFromInfix}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{PrefixFromInfix()}{PrefixFromInfix()}}
+{\footnotesize\ttfamily string Prefix\+From\+Infix (\begin{DoxyParamCaption}\item[{string}]{input }\end{DoxyParamCaption})}
+
+
+
+the number of operands in the expression is stored in this variable arr\+Length 
+
+initializing the function that converts an infix expression to prefix
+
+n is the length of the expression
+
+initalizing the stack data structure
+
+we reverse the input expression to first compute the postfix expression
+
+if the current character of the input is a space we continue
+
+we check if the function is operator
+
+we check if the function is an operand
+
+we check if the input is an open parantheses ~\newline
+
+
+we check if the input is an close parantheses
+
+we check if the stack is empty ~\newline
+
+
+we now reverse the expression again from the postfix expression to get the prefix statement\mbox{\Hypertarget{assign_8cpp_ae6af051edad90aad2924797a3368d797}\label{assign_8cpp_ae6af051edad90aad2924797a3368d797}} 
+\index{assign.cpp@{assign.cpp}!Reverse@{Reverse}}
+\index{Reverse@{Reverse}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{Reverse()}{Reverse()}}
+{\footnotesize\ttfamily string Reverse (\begin{DoxyParamCaption}\item[{string}]{input,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+this function is used to reverse the string input by pushing all members into one stack then adding them to the input expression again by first in last out logic which reverses the expression\mbox{\Hypertarget{assign_8cpp_accfcaff43c70e4d9ab90f81beed0b920}\label{assign_8cpp_accfcaff43c70e4d9ab90f81beed0b920}} 
+\index{assign.cpp@{assign.cpp}!settruth@{settruth}}
+\index{settruth@{settruth}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{settruth()}{settruth()}}
+{\footnotesize\ttfamily void settruth (\begin{DoxyParamCaption}\item[{char $\ast$}]{a }\end{DoxyParamCaption})}
+
+this function inputs the truth values to be designated for the operands
+
+adds operand into operandarray ~\newline
+
+
+adds truth value into trutharray in the same positions as the operand, the truth value is inputted for, in the operandarray\mbox{\Hypertarget{assign_8cpp_ab6d6cac234bc6b0d18289cc562745f58}\label{assign_8cpp_ab6d6cac234bc6b0d18289cc562745f58}} 
+\index{assign.cpp@{assign.cpp}!SwitchParantheses@{SwitchParantheses}}
+\index{SwitchParantheses@{SwitchParantheses}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{SwitchParantheses()}{SwitchParantheses()}}
+{\footnotesize\ttfamily char Switch\+Parantheses (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+we implement a function to switch parantheses while reversing the expression ~\newline
+\mbox{\Hypertarget{assign_8cpp_a4061862a4d65a4bb9dc9b72eed22c8e7}\label{assign_8cpp_a4061862a4d65a4bb9dc9b72eed22c8e7}} 
+\index{assign.cpp@{assign.cpp}!traverse@{traverse}}
+\index{traverse@{traverse}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{traverse()}{traverse()}}
+{\footnotesize\ttfamily void traverse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtree}{tree}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+this function traverses the parse tree and prints the infix expression of the parse tree
+
+if p points to null then we return, this is base condition for recursion to end
+
+traversing through the left sub tree
+
+printing current atom
+
+traversing through the right subtree\mbox{\Hypertarget{assign_8cpp_a3216a54139078a66ccc597b8dd004700}\label{assign_8cpp_a3216a54139078a66ccc597b8dd004700}} 
+\index{assign.cpp@{assign.cpp}!truthvalue@{truthvalue}}
+\index{truthvalue@{truthvalue}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{truthvalue()}{truthvalue()}}
+{\footnotesize\ttfamily bool truthvalue (\begin{DoxyParamCaption}\item[{bool}]{opd1,  }\item[{char}]{opt,  }\item[{bool}]{opd2 }\end{DoxyParamCaption})}
+
+this function computes the truth value of the operand and its right and left atoms
+
+this function computes the logarithmic AND of the two boolean values
+
+this function computes the logarithmic IMPLICATION of the two boolean values
+
+this function computes the logarithmic OR of the two boolean values ~\newline
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{assign_8cpp_ac68eb6eb016b49a93177e74fbaadf820}\label{assign_8cpp_ac68eb6eb016b49a93177e74fbaadf820}} 
+\index{assign.cpp@{assign.cpp}!arrlength@{arrlength}}
+\index{arrlength@{arrlength}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{arrlength}{arrlength}}
+{\footnotesize\ttfamily int arrlength = 0}
+
+
+
+the truth values of the operands in the expression are stored in truth\+Array ~\newline
+ 
+
+\mbox{\Hypertarget{assign_8cpp_acb559820d9ca11295b4500f179ef6392}\label{assign_8cpp_acb559820d9ca11295b4500f179ef6392}} 
+\index{assign.cpp@{assign.cpp}!i@{i}}
+\index{i@{i}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily int i = 1}
+
+\mbox{\Hypertarget{assign_8cpp_aae9a0f3f9862ef783e48e11e9d04e85f}\label{assign_8cpp_aae9a0f3f9862ef783e48e11e9d04e85f}} 
+\index{assign.cpp@{assign.cpp}!operandarray@{operandarray}}
+\index{operandarray@{operandarray}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{operandarray}{operandarray}}
+{\footnotesize\ttfamily char operandarray\mbox{[}53\mbox{]}}
+
+
+
+initializing the root of the tree 
+
+\mbox{\Hypertarget{assign_8cpp_ad56896b1e792ccea6de30395d44b95ad}\label{assign_8cpp_ad56896b1e792ccea6de30395d44b95ad}} 
+\index{assign.cpp@{assign.cpp}!root@{root}}
+\index{root@{root}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtree}{tree}}$\ast$ root}
+
+\mbox{\Hypertarget{assign_8cpp_afef3905469c558d579b6a513dc20a719}\label{assign_8cpp_afef3905469c558d579b6a513dc20a719}} 
+\index{assign.cpp@{assign.cpp}!trutharray@{trutharray}}
+\index{trutharray@{trutharray}!assign.cpp@{assign.cpp}}
+\doxysubsubsection{\texorpdfstring{trutharray}{trutharray}}
+{\footnotesize\ttfamily bool trutharray\mbox{[}53\mbox{]}}
+
+
+
+the operands in the expression are stored in operand\+Array ~\newline
+ 
+
